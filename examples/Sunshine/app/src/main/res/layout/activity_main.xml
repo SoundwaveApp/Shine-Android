@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/EditText"
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/full_name"
+        style="@style/EditText"
+        android:inputType="textCapWords"
+        android:hint="Full Name"/>
+
+    <EditText
+        android:id="@+id/gender"
+        style="@style/EditText"
+        android:inputType="textCapWords"
+        android:hint="Gender"/>
+
+    <EditText
+        android:id="@+id/dob"
+        style="@style/EditText"
+        android:editable="false"
+        android:hint="Date of Birth"/>
+
+    <Button
+        android:id="@+id/register"
+        style="@style/Button"
+        android:text="Register"/>
+
+</LinearLayout>

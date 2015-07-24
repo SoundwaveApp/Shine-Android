@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+
+        <item name="colorPrimary">@color/window_background</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/button</item>
+    </style>
+
+    <style name="EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:layout_marginBottom">@dimen/margin</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Button" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:textColor">@color/white_text</item>
+    </style>
+
+</resources>
