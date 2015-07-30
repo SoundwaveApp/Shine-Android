@@ -27,7 +27,7 @@ Then add the following to your dependencies block:
 
 ```css
 dependencies {
-    compile 'com.soundwave:shine-android-sdk:0.0.+'
+    compile 'com.soundwave:shine-android-sdk:0.1.0'
 }
 ```
 
