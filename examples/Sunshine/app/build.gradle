@@ -23,5 +23,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
 
     // Shine
-    compile 'com.soundwave:shine-android-sdk:0.0.+'
+    compile 'com.soundwave:shine-android-sdk:0.2.0'
 }

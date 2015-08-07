@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.soundwave.shine.LogMode;
 import com.soundwave.shine.Registration;
 import com.soundwave.shine.Shine;
 import com.soundwave.sunshine.api.ApiClient;
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements ApiClient.Callbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Shine.initialize(this, "YOUR_DEV_KEY", LogMode.TO_FILE);
+
         apiClient = new ApiClient(this);
 
         register = (Button) findViewById(R.id.register);
