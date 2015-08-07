@@ -85,7 +85,7 @@ private void onSuccessfulLogin() {
 ##Logging##
 ----------
 
-Should you have any issues while using Shine, you can enable and send the logs to our developers. They will be happy to help you out. In order to enable the logs simply use the following `#initialize()` method instead of the one showned above:
+Should you have any issues while using Shine, you can enable and send the logs to our developers. They will be happy to help you out. In order to enable the logs simply use the following `#initialize()` method instead of the one showed above:
 
 
 ```java
