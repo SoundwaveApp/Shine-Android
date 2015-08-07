@@ -17,7 +17,7 @@ Shine on Android currently supports 2.3 (API 9) and above.
 In your app’s `build.gradle` file add the following to your *repositories* block:
 
 
-```css
+```
 repositories {
     maven { url 'http://repo.soundwave.com' }
 }
@@ -25,9 +25,9 @@ repositories {
 
 Then add the following to your dependencies block:
 
-```css
+```
 dependencies {
-    compile 'com.soundwave:shine-android-sdk:0.1.0'
+    compile 'com.soundwave:shine-android-sdk:0.2.0'
 }
 ```
 
@@ -47,7 +47,6 @@ The following permissions are defined in the source code of the Shine SDK. Which
 To make the most of the Shine SDK you should also ask for the following permissions. Note that these are optional and you can choose not to use some of them if they don’t fit your app’s needs. Doing so will prevent the SDK from working at it’s full capacity but Shine will still do as most as it can.
 
 ```xml
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <!-- Required to collect device’s contacts -->
 <uses-permission android:name="android.permission.READ_CONTACTS" />
 <!-- Required to collect the music library -->
@@ -58,7 +57,7 @@ To make the most of the Shine SDK you should also ask for the following permissi
 
 ###Initialising Shine###
 
-Initialize Shine by calling the following in the `onCreate()` method of your Application class:
+Initialize Shine by calling the following in the `onCreate()` method of your `MainActivity` class:
 
 
 ```java
@@ -83,13 +82,35 @@ private void onSuccessfulLogin() {
 }
 ```
 
-##Enabling Logs##
+##Logging##
 ----------
 
-Should you have any issues while using Shine, you can enable and send the logs to our developers. They will be happy to help you out. In order to enable the logs simply call the following method before you initialize Shine:
+Should you have any issues while using Shine, you can enable and send the logs to our developers. They will be happy to help you out. In order to enable the logs simply use the following `#initialize()` method instead of the one showned above:
 
 
 ```java
-Shine.enableLogging();
-Shine.initialize(this, "YOUR_DEVELOPER_KEY");
+Shine.initialize(this, "YOUR_DEVELOPER_KEY", LogMode.TO_CONSOLE);
+```
+
+###Writing Logs to File###
+If you don't have a rooted phone you might not have access to your app's logs in release mode. In this situation you can tell Shine to also write the logs to a file. In order to do that follow these steps:
+
+1. Make sure you ask for this permission (note this is only required if you want to write the logs to a file): 
+```
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+2. Initialize Shine with the right log mode:
+```
+Shine.initialize(this, "YOUR_DEV_KEY", LogMode.TO_FILE);
+```
+
+Then when you need to access the log file ensure you have the device connected to your computer and run the following command:
+
+```
+adb pull /sdcard/Android/data/{YOUR_APP_PACKAGE}/files/shine.log
+```
+
+For Sunshine whose package is `com.soundwave.sunshine` the command above would be:
+```
+adb pull /sdcard/Android/data/com.soundwave.sunshine/files/shine.log
 ```
