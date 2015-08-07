@@ -93,16 +93,16 @@ Shine.initialize(this, "YOUR_DEVELOPER_KEY", LogMode.TO_CONSOLE);
 ```
 
 ###Writing Logs to File###
-If you don't have a rooted phone you might not have access to your app's logs in release mode. In this situation you can tell Shine to also write the logs to a file. In order to do that follow these steps:
+If you don't have a rooted phone you might not have access to your app's logs in release mode. In this situation you can tell Shine to also write the logs to a file. In order to do that:
 
-1. Make sure you ask for this permission (note this is only required if you want to write the logs to a file): 
-```
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-```
-2. Initialize Shine with the right log mode:
-```
-Shine.initialize(this, "YOUR_DEV_KEY", LogMode.TO_FILE);
-```
+1. Make sure you ask for this permission (note this is only required if you want to write the logs to a file):    
+    ```
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    ```
+2. Initialize Shine with the right log mode:   
+    ```
+    Shine.initialize(this, "YOUR_DEV_KEY", LogMode.TO_FILE);
+    ```
 
 Then when you need to access the log file ensure you have the device connected to your computer and run the following command:
 
