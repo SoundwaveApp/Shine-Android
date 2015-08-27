@@ -27,7 +27,7 @@ Then add the following to your dependencies block:
 
 ```
 dependencies {
-    compile 'com.soundwave:shine-android-sdk:0.2.0'
+    compile 'com.soundwave:shine-android-sdk:0.5.0'
 }
 ```
 
@@ -47,8 +47,6 @@ The following permissions are defined in the source code of the Shine SDK. Which
 To make the most of the Shine SDK you should also ask for the following permissions. Note that these are optional and you can choose not to use some of them if they don’t fit your app’s needs. Doing so will prevent the SDK from working at it’s full capacity but Shine will still do as most as it can.
 
 ```xml
-<!-- Required to collect device’s contacts -->
-<uses-permission android:name="android.permission.READ_CONTACTS" />
 <!-- Required to collect the music library -->
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <!-- Required to collect device’s location -->
